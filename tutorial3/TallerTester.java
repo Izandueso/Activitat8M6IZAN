@@ -22,12 +22,12 @@ public class TallerTester {
         em.getTransaction().commit();
 
         // Find the number of Point objects in the database:
-        Query q1 = em.createQuery("SELECT marca(v1) FROM Vehicle v1");
-        System.out.println("Datos vehiculo 1: " + q1.getSingleResult());
+        Query q1 = em.createQuery("SELECT v1 FROM Vehicle v1");
+        System.out.println("Datos vehiculo: " + q1.getResultList());
 
         // Find the average X value:
-        Query q2 = em.createQuery("SELECT * FROM Propietari p1");
-        System.out.println("Datos propietario: " + q2.getSingleResult());
+        Query q2 = em.createQuery("SELECT p1 FROM Propietari p1");
+        System.out.println("Datos propietario: " + q2.getResultList());
 
         // Retrieve all the Point objects from the database:
         //TypedQuery<Point> query =
