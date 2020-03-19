@@ -38,7 +38,15 @@ public class Propietari implements Serializable {
     public Date getData() {
          return this.data_donar_cotxe;
     }
-
+    
+    public String getNom(){
+        return this.nom;
+    }
+    
+    public boolean getEsUrgent(){
+        return this.es_urgent;
+    }
+    
     @Override
     public String toString() {
         return String.format("Nom: " + nom + " Presupost: " + presupost + "  Data: "

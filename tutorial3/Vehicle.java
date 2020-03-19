@@ -34,9 +34,17 @@ public class Vehicle implements Serializable {
     public int getCostReparacio() {
          return this.cost_reparacio;
     }
+    
+    public String getMarca(){
+        return this.marca;
+    }
 
     public Date getData() {
          return this.data;
+    }
+    
+    public boolean getEsReparable(){
+        return this.es_reparable;
     }
 
     @Override
