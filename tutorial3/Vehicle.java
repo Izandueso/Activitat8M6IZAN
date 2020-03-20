@@ -10,7 +10,8 @@ public class Vehicle implements Serializable {
     
     @Id @GeneratedValue
     private long id;
-
+    
+    private Propietari propietari;
     private String marca;
     private int cost_reparacio;
     private Date data;
@@ -20,11 +21,12 @@ public class Vehicle implements Serializable {
     }
 
     Vehicle(String marca, int cost_reparacio , Date data,
-            boolean es_reparable) {
+            boolean es_reparable, Propietari propietari) {
         this.marca = marca;
         this.cost_reparacio = cost_reparacio;
         this.data = data;
-        this.es_reparable = es_reparable;     
+        this.es_reparable = es_reparable;    
+        this.propietari = propietari;
     }
 
     public Long getId() {
@@ -45,6 +47,10 @@ public class Vehicle implements Serializable {
     
     public boolean getEsReparable(){
         return this.es_reparable;
+    }
+    
+    public Propietari getPropietari(){
+        return this.propietari;
     }
 
     @Override

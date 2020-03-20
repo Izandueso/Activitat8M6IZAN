@@ -14,9 +14,9 @@ public class TallerTester {
         //Creem els objectes a la base de dades vehicle i propietari
         em.getTransaction().begin();
        
-        Vehicle v1 = new Vehicle("Lamborhini", 20000, new Date(02-1-2018), true);
         Propietari p1 = new Propietari("Pepito", 30000, new Date(01-1-2018), true);
-            
+        Vehicle v1 = new Vehicle("Lamborhini", 20000, new Date(02-1-2018), true,p1);
+      
         em.persist(v1);
         em.persist(p1);
         em.getTransaction().commit();
