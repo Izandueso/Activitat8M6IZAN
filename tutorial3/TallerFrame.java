@@ -76,7 +76,7 @@ public class TallerFrame extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"sasdadsads"},
+                {""},
                 {null},
                 {null},
                 {null},
@@ -100,9 +100,17 @@ public class TallerFrame extends javax.swing.JFrame {
                 {null}
             },
             new String [] {
-                "Title 1"
+                "Dades: "
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jButton3.setText("Mostrar propietaris");

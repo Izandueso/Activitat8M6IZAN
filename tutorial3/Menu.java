@@ -41,6 +41,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jButton2.setText("Insertar dades");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Sortir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +104,13 @@ public class Menu extends javax.swing.JFrame {
         System.exit(0);
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+         this.setVisible(false);
+        new TallerFrameInsertar().setVisible(true); 
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
